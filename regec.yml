@@ -9,4 +9,4 @@
 
     - name: try Regex patters 1
       debug:
-        msg: "{{ Deleting file: {{ itlist_of_files_in_all_paths[0].path.split('/')[-1] | regex_search('[0-9]+\\.[0-9]+') }}"
+        msg: "{{ list_of_files_in_all_paths[0].path.split('/')[-1] | regex_search('[0-9]+\\.[0-9]+') }}"
