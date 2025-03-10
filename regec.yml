@@ -1,5 +1,5 @@
 ---
-- name: Delete files on a windows server
+- name: Playing around with regex
   hosts: localhost
   become: no
   vars:
@@ -7,6 +7,6 @@
       - "Found file: /opt/patrol/bmcpp/Linux-2-6-x86-64/best1/24.2.00"
   tasks:
 
-    - name: Delete files
+    - name: try Regex patters 1
       debug:
         msg: "{{ Deleting file: {{ itlist_of_files_in_all_paths[0].path.split('/')[-1] | regex_search('[0-9]+\\.[0-9]+') }}"
