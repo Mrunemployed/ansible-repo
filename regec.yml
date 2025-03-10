@@ -1,6 +1,6 @@
 ---
 - name: Delete files on a windows server
-  hosts: windows
+  hosts: localhost
   become: no
   vars_files:
     - vars.yml
